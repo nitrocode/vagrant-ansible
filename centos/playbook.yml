@@ -1,0 +1,8 @@
+---
+- name: playbook
+  hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: install apache
+    yum: name=httpd state=present
